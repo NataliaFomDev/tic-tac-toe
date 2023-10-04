@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(30, 30, 32);
+    color: #fff;
+}
+
+/* GAME SECTION */
+/* GAME SECTION_game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    width: 320px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(55, 55, 63);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* GAME SECTION_crosses and toes */
+h1 {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+.o {
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+}
+
+/*.x {
+    color: #FF0000; 
+    background: rgba(255, 0, 0, 0.2); 
+}
+.o {
+    color: #0000FF; 
+    background: rgba(0, 0, 255, 0.2); 
+}*/
+
+
+/* FOOTER */
+.footer {
+    background-color: rgb(102, 97, 97); 
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+.footer-img {
+    filter: invert();
+}
