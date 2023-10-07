@@ -9,6 +9,12 @@ body {
 }
 
 /* GAME SECTION */
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 /*.game-container {
     display: flex;
     justify-content: center;
@@ -33,25 +39,21 @@ body {
     justify-content: center;
     font-size: 24px;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* GAME SECTION_crosses and toes */
-h1 {
-    text-shadow: 0 0 10px rgba(243, 162, 162, 0.8);
-}
-.o {
-    text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+.cell.x::before {
+    content: "X";
+    font-size: 90px;
+    text-shadow: 0 0 50px rgba(243, 162, 162, 0.8);
 }
 
-/*.x {
-    color: #FF0000; 
-    background: rgba(255, 0, 0, 0.2); 
+.cell.o::before {
+    content: "O";
+    font-size: 90px;
+    text-shadow: 0 0 50px rgba(0, 0, 255, 0.8);
 }
-.o {
-    color: #0000FF; 
-    background: rgba(0, 0, 255, 0.2); 
-}*/
-
 
 /* FOOTER */
 .footer {
