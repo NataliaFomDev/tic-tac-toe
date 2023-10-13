@@ -12,28 +12,62 @@ body {
 section {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: auto;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-/*.game-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
+
 /* GAME SECTION_game board */
+.game-name {
+    display: flex;
+    flex-direction: row;
+}
+
+.blue-text {
+    color:rgba(90, 90, 247, 0.8);
+    text-shadow: 0 0 50px rgba(0, 0, 255, 0.8);
+}
+
+.red-text {
+    color: rgba(243, 162, 162, 0.8);
+    text-shadow: 0 0 50px rgba(243, 162, 162, 0.8);
+}
+
+h1 {
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+.game-status {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+p {
+    margin: 0;
+}
+
 .game-board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-gap: 5px;
     width: 320px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
     flex-grow: 1;
 }
 
 .cell {
     width: 100px;
     height: 100px;
-    background-color: rgb(55, 55, 63);
+    background-color: rgb(92, 92, 92);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,17 +76,31 @@ section {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#reset-button {
+    margin: 10px 0;
+    width: 100px;
+    height: 50px;
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgba(90, 90, 247, 0.8), rgba(243, 162, 162, 0.8));
+}
+
 /* GAME SECTION_crosses and toes */
 .cell.x::before {
     content: "X";
     font-size: 90px;
-    text-shadow: 0 0 50px rgba(243, 162, 162, 0.8);
+    text-shadow: 0 0 70px rgba(243, 162, 162, 0.8);
 }
 
 .cell.o::before {
     content: "O";
     font-size: 90px;
-    text-shadow: 0 0 50px rgba(0, 0, 255, 0.8);
+    text-shadow: 0 0 70px rgba(0, 0, 255, 0.8);
+}
+
+/* GAME SECTION_results of games */
+.results-container {
+    width: 320px;
+    height: 5px;   
 }
 
 /* FOOTER */

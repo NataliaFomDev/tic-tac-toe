@@ -6,7 +6,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <!--<link rel="manifest" href="http://localhost/site.webmanifest">-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Tic-tac-toe</title>
@@ -14,7 +13,12 @@
 <body>
     <section>
         <div class="game-container">
-            <h1>Tic-tac-toe</h1>
+            <div class="game-name">
+                <h1 class="blue-text">tic</h1><h1 >-tac</h1><h1 class="red-text">-toe</h1>
+            </div>
+            <div class="game-status">
+                <p>Player's move: <span id="current-player">X</span></p>
+            </div>
             <div class="game-board">
                 <div class="cell" id="0"></div>
                 <div class="cell" id="1"></div>
@@ -26,14 +30,15 @@
                 <div class="cell" id="7"></div>
                 <div class="cell" id="8"></div>
             </div>
-            <div class="game-status">
-            <p>Player`s move: <span id="current-player">X</span></p>
-            </div>
-            <button id="reset-button">Start again</button>
+            <div class="reset-button">
+                <button id="reset-button">Start again</button>
             </div>
         </div>
         <div id="results-container">
-            <!-- Сюда будут добавлены результаты из Local Storage -->
+            <ul id="results-list"></ul>
+            <div>
+                <button id="clear-storage-button">Clear field</button>
+            </div>
         </div>
     </section>
     <footer class="footer">
